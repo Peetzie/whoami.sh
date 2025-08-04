@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lab | Terminal</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <div class="window">
+    <div class="title-bar">
+      <span class="dot green" id="maximize-btn"></span>
+      <span class="app-title">
+      &lt;/&gt; Terminal</span>
+    </div>
+    <div class="terminal" id="terminal">
+      <div class="line prompt">
+        <span class="prompt-user">guest</span>@<span class="prompt-host">peetzie</span>:<span class="prompt-dir">~</span><span class="prompt-symbol">$ </span><span id="user-input"></span><span class="cursor">|</span>
+      </div>
+    </div>
+    <input type="text" id="hidden-input" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

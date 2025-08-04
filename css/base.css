@@ -1,0 +1,79 @@
+/* Catppuccin Mocha (Default Theme) */
+:root {
+  --background: #1e1e2e;
+  --foreground: #cdd6f4;
+  --comment: #6c7086;
+  --red: #f38ba8;
+  --orange: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --cyan: #94e2d5;
+  --blue: #89b4fa;
+  --magenta: #cba6f7;
+  --black: #181825;
+  --black-light: #313244;
+  --black-lighter: #45475a;
+}
+
+/* Gruvbox Dark Theme */
+[data-theme="gruvbox"] {
+  --background: #282828;
+  --foreground: #ebdbb2;
+  --comment: #928374;
+  --red: #cc241d;
+  --orange: #d65d0e;
+  --yellow: #d79921;
+  --green: #98971a;
+  --cyan: #689d6a;
+  --blue: #458588;
+  --magenta: #b16286;
+  --black: #1d2021;
+  --black-light: #3c3836;
+  --black-lighter: #504945;
+}
+
+/* Matrix Theme */
+[data-theme="matrix"] {
+  --background: #000000;
+  --foreground: #00ff00;
+  --comment: #008000;
+  --red: #ff0000;
+  --orange: #ff8000;
+  --yellow: #ffff00;
+  --green: #00ff00;
+  --cyan: #00ffff;
+  --blue: #0080ff;
+  --magenta: #ff00ff;
+  --black: #001100;
+  --black-light: #003300;
+  --black-lighter: #004400;
+}
+
+/* Catppuccin Latte (Light Theme) */
+[data-theme="catppuccin-latte"] {
+  --background: #eff1f5;
+  --foreground: #4c4f69;
+  --comment: #6c6f85;
+  --red: #d20f39;
+  --orange: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --cyan: #179299;
+  --blue: #1e66f5;
+  --magenta: #8839ef;
+  --black: #e6e9ef;
+  --black-light: #dce0e8;
+  --black-lighter: #ccd0da;
+}
+
+body {
+  font-family: 'Fira Code', 'Consolas', 'Menlo', 'Monaco', monospace;
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

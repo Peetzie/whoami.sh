@@ -1,0 +1,29 @@
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+#reopen-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background-color: #222;
+  color: #00ff00;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+  display: none;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+#reopen-icon:hover {
+  background-color: #333;
+}

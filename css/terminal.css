@@ -1,0 +1,234 @@
+.title-bar {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: var(--black);
+  cursor: default;
+  user-select: none;
+  height: 25px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+.red    { display: none; } 
+.yellow { display: none; } 
+.green  { background-color: #27c93f; cursor: pointer; }
+
+.app-title {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+.terminal {
+  flex: 1;
+  padding: 10px;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden; 
+  line-height: 1.4;
+}
+
+
+.prompt {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.prompt-user {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.prompt-host {
+  color: var(--foreground);
+}
+
+.prompt-dir {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.prompt-symbol {
+  color: var(--foreground);
+  font-weight: bold;
+}
+
+.cursor {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--foreground);
+  animation: blink 1s steps(1) infinite;
+ 
+}
+
+.cmd {
+  color: var(--cyan);
+  font-weight: bold;
+}
+
+.cmd-desc {
+  color: var(--comment);
+  margin-left: 1em;
+}
+
+
+.help-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 4px 0;
+}
+
+.help-line .cmd {
+  flex: 0 0 120px; 
+  padding-right: 1rem;
+}
+
+.help-line .cmd-desc {
+  flex: 1;
+}
+
+.pro-tip {
+  color: var(--yellow);
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.dir {
+  color: var(--blue);
+  font-weight: bold;
+} 
+
+.completion-suggestions {
+  color: var(--comment);
+  margin-bottom: 5px;
+  background: var(--black-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 2px 0;
+  font-family: inherit;
+}
+
+.completion-indicator {
+  color: var(--yellow);
+  font-style: italic;
+  margin: 2px 0;
+}
+
+.completion-indicator .cmd {
+  color: var(--cyan);
+  font-weight: bold;
+}
+
+.file-content {
+  white-space: pre-wrap; 
+  color: var(--foreground);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ascii-art {
+  color: var(--magenta);
+  font-size: 0.7rem;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.welcome-container {
+  display: flex;
+  gap: 2rem; 
+  align-items: flex-start;
+}
+
+.welcome-left {
+  flex-grow: 1;
+}
+
+.welcome-right {
+  color: var(--magenta);
+  font-size: 0.2rem; 
+  line-height: 1;
+  flex-shrink: 0; 
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+
+.terminal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.terminal::-webkit-scrollbar-track {
+  background: var(--black); 
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  background-color: var(--black-light); 
+  border-radius: 10px;
+  border: 2px solid var(--black); 
+}
+
+.terminal::-webkit-scrollbar-thumb:hover {
+  background-color: var(--comment); 
+}
+
+.window {
+  position: fixed;
+  width: 80vw; 
+  height: 70vh; 
+  max-width: 1200px; 
+  background: #24283b; 
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--black-light);
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  /* Add transition for smooth resizing */
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, border-radius 0.3s ease;
+}
+
+/* Style for maximized window */
+.window.maximized {
+  width: 100vw;
+  height: 100vh;
+  top: 0 !important;
+  left: 0 !important; 
+  border-radius: 0;
+  max-width: none;
+}
+
+/* Make the actual input field invisible but still focusable */
+#hidden-input {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Fix user input spacing */
+#user-input {
+  margin-left: 8.5px; /* Troll variable, */
+  min-width: 2px;
+}
