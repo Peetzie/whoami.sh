@@ -20,8 +20,7 @@ Type `help` to see all available commands, or try these:
 
 ## 🛠️ Built With
 
-- **HTML5, CSS3, JavaScript**
-- **CSS Custom Properties** 
+- **HTML, CSS JavaScript**
 
 ## 🎨 Themes
 
